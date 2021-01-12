@@ -1,0 +1,133 @@
+@import URL(normalize.css);
+/*normalize.css no se meten las reglas dentro de tu css, se importa el css con @import o se llama al css desde el html*/
+/*                          Global */
+
+*{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body{
+    /* width: 100%;
+    height: 100%; */
+    margin: 0px 0px!important;
+    padding: 0px 0px!important;
+}
+
+/* Tipos de encabezados */
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+/* Párrafos y listas. No los puse por "li" ya que en el encabezado especificaba listas y no elementos de listas */
+
+p, ul, ol{
+    font-size: .8em;
+    
+}
+
+/* Enlaces */
+a{
+    color:black;
+}
+
+a:hover{
+    text-decoration: none;
+    background-color: black;
+    color: white;
+}
+
+
+/*                          Navegación lateral */
+
+nav{
+    float:left;
+    height: 15%;
+}
+
+/* Listas desordenadas en el menú de la izquierda */
+
+nav ul{
+    font-size: 1.5em;
+    line-height: 2em;
+    list-style-type: none;
+    text-align: center;
+    margin-left: -20%;
+}
+
+/* Enlaces navegación */
+
+nav a:hover{
+    background-color: #a9a9a9;
+}
+
+
+/*                          Cabecera */
+
+header{
+    background-color: #cccccc;
+    color: white;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 15px;
+    line-height: 5px;
+    
+}
+
+header h2{
+    font-size: 1em;
+}
+
+/*                          Contenido */
+
+#content{
+    display: inline-block;
+    width: 80%;
+    padding: 10px 20px;
+    margin: 5px 0px;
+}
+
+#content ul{
+    list-style-type: circle;
+}
+
+/*                          Pié de página */
+
+footer{
+    position:static;
+    width: 100%;
+    bottom: 0;
+    height: 31px;
+    background-color: #cccccc;
+    background-image: linear-gradient(to right, #c9c9c9, #888888);
+  }
+  
+  footer p{
+    font-weight: bold;
+    color: white;
+    margin: 0px;
+}
+
+#footer-left{
+    float:left;
+    height: 31px;
+    vertical-align: text-top;
+    padding-left: 1%;
+}
+
+
+#footer-right{
+  float:right;
+  text-align: start;
+  height: 31px;
+
+}
+#footer-right a:hover{
+  background-color: transparent;
+}
+
+/* Modifico la imagen para que vaya hasta el final, si no me hace overflow */
+
+#footer-right a img{
+  vertical-align: bottom;
+}
+
