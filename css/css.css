@@ -1,6 +1,9 @@
-@import URL(normalize.css);
-/*normalize.css no se meten las reglas dentro de tu css, se importa el css con @import o se llama al css desde el html*/
+@import url('normalize.css');
+/* ======================Normalize.css====================== */
+/* para llamar a otro css desde este solo tienes que importarlo
+además lo debes poner siempre de primero */
 /*                          Global */
+
 
 *{
     font-family: 'Courier New', Courier, monospace;
@@ -9,8 +12,13 @@
 body{
     /* width: 100%;
     height: 100%; */
-    margin: 0px 0px!important;
+    margin: 0px 0px!important; /* La palabra clave !important se utiliza para dar mayor prioridad a una instrucciones, de manera que las instrucciones siguientes no puedan sobrescribirla. Se le da prioridad frente a todas las demás especificaciones.
+    No todos los navegadores la entiende, por lo tanto lo mejor para que una propiedad se aplique
+    es aplicarla de último. La última regla es la que prevaleze frente al resto, salvo si usamos importat */
     padding: 0px 0px!important;
+    /* el tipo de fuente lo puedes poner en el body
+    ya que es una propiedad que se hereda por todos los elementos que están
+    entre las etiquetas del body */
 }
 
 /* Tipos de encabezados */
@@ -18,7 +26,10 @@ body{
 h1, h2, h3, h4, h5, h6{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-/* Párrafos y listas. No los puse por "li" ya que en el encabezado especificaba listas y no elementos de listas */
+/* Párrafos y listas. No los puse por "li" ya que en el encabezado especificaba listas y no elementos de listas 
+en este caso se puede colocar tanto en el elemento superior como en los li ya que al igual que ocurre
+con la propiedad de la fuente es una propiedad que será heredada por los elementos que estén entre las etiquetas de apertura
+y cierre de los p, ul y ol*/
 
 p, ul, ol{
     font-size: .8em;
@@ -42,6 +53,7 @@ a:hover{
 nav{
     float:left;
     height: 15%;
+    padding: 1em;
 }
 
 /* Listas desordenadas en el menú de la izquierda */
@@ -51,7 +63,10 @@ nav ul{
     line-height: 2em;
     list-style-type: none;
     text-align: center;
-    margin-left: -20%;
+    /* mejor eliminar los márgenes y padding*/
+    margin: 0em;
+    padding: 0em;
+    /* margin-left: -20%;*/
 }
 
 /* Enlaces navegación */
@@ -96,7 +111,7 @@ footer{
     position:static;
     width: 100%;
     bottom: 0;
-    height: 31px;
+    height: auto;
     background-color: #cccccc;
     background-image: linear-gradient(to right, #c9c9c9, #888888);
   }
@@ -105,6 +120,13 @@ footer{
     font-weight: bold;
     color: white;
     margin: 0px;
+/* para evitar los desbordamientos para dispositivos más pequeños */
+ /* BOTH of the following are required for text-overflow
+    white-space: nowrap ->Elimina los espacios en blanco a un solo espacio. 
+	y suprime saltos de linea del origen. */
+    white-space: nowrap;
+    /*overflow: hidden en tu caja, que hace exactamente lo que dice: ocultar el desbordamiento*/
+	overflow: hidden;
 }
 
 #footer-left{
@@ -112,6 +134,8 @@ footer{
     height: 31px;
     vertical-align: text-top;
     padding-left: 1%;
+    /* podemos hacer que en el texto se ponga .. reduciendo el texto */
+    text-overflow: ellipsis;
 }
 
 
@@ -130,4 +154,5 @@ footer{
 #footer-right a img{
   vertical-align: bottom;
 }
+
 
